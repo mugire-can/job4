@@ -8,11 +8,11 @@ my_print_hello()
 ## job 2
 
 def My_print_name(name):
-    print("name")
+    print(name)
 
-name("Can")
-name("Han")
-name("Zam")
+My_print_name("Can")
+My_print_name("Han")
+My_print_name("Zam")
 
 
 ## job 3
@@ -37,15 +37,23 @@ GetHello()
 ## job 5
 
 def calcule(num1, operator, num2):
-    num1<= 0 or num1>= 0
-    operator == "/" or operator == "+" or operator == "-" or operator == "*" or operator == "%"
-    num2 <= 0 or num2 >= 0
-    result = num1,operator, num2
+    if operator == "+":
+        result = num1 + num2
+    elif operator == "-":
+        result = num1 - num2
+    elif operator == "*":
+        result = num1 * num2
+    elif operator == "/":
+        result = num1 / num2 if num2 != 0 else "Error: Division by zero"
+    elif operator == "%":
+        result = num1 % num2
+    else:
+        result = "Unknown operator"
     print(result)
 
-calcule(5, 6, 4)
-calcule(8, 7, 4)
-calcule(1, 97, 1)
+calcule(5, "+", 6)
+calcule(8, "-", 7)
+calcule(1, "*", 97)
 
 
 ## job 6 
@@ -128,12 +136,7 @@ def nombre(x):
     if x % 2 == 0:
         print("pair")
     elif x % 2 != 0:
-        print ("impair")
-    elif x < 0 and x % 2 == 0:
-        print("chiffre entier", "pozitif")
-
-
-
+        print("impair")
 
 nombre(-74)
 nombre(15)
