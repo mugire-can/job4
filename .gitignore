@@ -2,8 +2,6 @@
 __pycache__/
 *.py[cod]
 *$py.class
-
-# C extensions
 *.so
 
 # Distribution / packaging
@@ -57,13 +55,12 @@ env/
 *.swp
 *.swo
 *~
-.DS_Store
 
 # OS files
 Thumbs.db
 .DS_Store
 
-# Project specific
+# Documentation & Logs
 *.pdf
 *.log
 .env
