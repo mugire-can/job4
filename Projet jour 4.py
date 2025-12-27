@@ -35,8 +35,10 @@ GetHello()
 
 
 ## job 5
+# Calculator function: performs arithmetic operations based on operator
 
 def calcule(num1, operator, num2):
+    # Determine operation based on operator parameter
     if operator == "+":
         result = num1 + num2
     elif operator == "-":
@@ -44,6 +46,7 @@ def calcule(num1, operator, num2):
     elif operator == "*":
         result = num1 * num2
     elif operator == "/":
+        # Prevent division by zero
         result = num1 / num2 if num2 != 0 else "Error: Division by zero"
     elif operator == "%":
         result = num1 % num2
@@ -108,17 +111,20 @@ my_function("legume", "hiver")
 
 
 ## job 9
+# Grade classification based on average score
 
 def moyenne(x, y, z):
-    result = (x + y +z) / 3
+    # Calculate average of three scores
+    result = (x + y + z) / 3
 
-    if 14<result<21:
-        print("moyenne_etudiant:","Très bon élève")
-    elif 10<result<15:
-        print("moyenne_etudiant:","Bon élève")
-    elif 7 <result < 11:
+    # Classify student based on average
+    if 14 < result < 21:
+        print("moyenne_etudiant:", "Très bon élève")
+    elif 10 < result < 15:
+        print("moyenne_etudiant:", "Bon élève")
+    elif 7 < result < 11:
         print("moyenne_etudiant:", "Élève moyen")
-    elif 0 <=result<8:
+    elif 0 <= result < 8:
         print("moyenne etudiant:", "Élève devant faire des efforts")
     else:
         print("non classifie")
@@ -143,9 +149,12 @@ nombre(15)
 nombre(54)
 
 ## job 11
+# Time conversion: minutes to hours and remaining minutes
 
 def time_to_text(minutes):
+    # Integer division to get hours
     heures = minutes // 60
+    # Modulo to get remaining minutes
     minutes_restantes = minutes % 60
     print(f"{heures} heures et {minutes_restantes} minutes")
 
@@ -158,8 +167,10 @@ time_to_text(0)
 
 
 ## job 12
+# String reversal using slice notation
 
 def inverser_chaine(chaine):
+    # Python slice notation: [start:stop:step] with -1 step reverses the string
     return chaine[::-1]
 
 print(inverser_chaine("nikana"))
